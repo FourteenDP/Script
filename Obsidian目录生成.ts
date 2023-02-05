@@ -215,7 +215,7 @@ namespace Utils {
       this.treeArr = this.tree.getTree({
         include: (file: string) => {
           let boolean = false;
-          const endsWith = ['.md'];
+          const endsWith = ['.md','.m4a','.pdf','.zip'];
           endsWith.forEach((item: string) => {
             if (file.endsWith(item)) {
               boolean = true;
@@ -225,7 +225,7 @@ namespace Utils {
         },
         exclude: (file: string) => {
           let boolean = false;
-          const startsWith = ['.', '-', '~', '0000', '📋目录', "README", "10000-仓库"];
+          const startsWith = ['.', '-', '~', '0000', '📋目录', "README", "仓库"];
           startsWith.forEach((item: string) => {
             if (file.startsWith(item)) {
               boolean = true;
