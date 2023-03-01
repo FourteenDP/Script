@@ -167,10 +167,10 @@ namespace Utils {
       let mdContent: string = ``;
       treeArr.forEach((item: any) => {
         if (item.children) {
-          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**\n`;
+          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**  [-->](./${item.title})\n`;
         } else {
-          item.title = item.title.replace(/\.md$/, '');
-          mdContent += `- [[${item.title}]]\n`;
+          item.noSuffixTitle = item.title.replace(/\.md$/, '');
+          mdContent += `- [[${item.noSuffixTitle}]] [-->](./${item.title})\n`;
         }
       });
       return mdContent;
@@ -215,17 +215,18 @@ namespace Utils {
       this.treeArr = this.tree.getTree({
         include: (file: string) => {
           let boolean = false;
-          const endsWith = ['.md','.m4a','.pdf','.zip'];
-          endsWith.forEach((item: string) => {
-            if (file.endsWith(item)) {
-              boolean = true;
-            }
-          });
+          // const endsWith = ['.md','.m4a','.pdf','.zip'];
+          // endsWith.forEach((item: string) => {
+          //   if (file.endsWith(item)) {
+          //     boolean = true;
+          //   }
+          // });
+          boolean = true;
           return boolean;
         },
         exclude: (file: string) => {
           let boolean = false;
-          const startsWith = ['.', '-', '~', '0000', '📋目录', "README", "仓库"];
+          const startsWith = ['.', '-', '~', '拾肆', '0000', '📋目录', 'README', '仓库', 'cedict_ts.u8'];
           startsWith.forEach((item: string) => {
             if (file.startsWith(item)) {
               boolean = true;
@@ -296,6 +297,7 @@ namespace Utils {
     program.deleteAllMdTitle();
   }
   else {
+    program.run(Command.generate);
     program.run(Command.help);
   }
 }
