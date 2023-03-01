@@ -167,10 +167,10 @@ namespace Utils {
       let mdContent: string = ``;
       treeArr.forEach((item: any) => {
         if (item.children) {
-          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**  [-->](./${item.title})\n`;
+          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](./${item.title}/📋目录.md)\n`;
         } else {
           item.noSuffixTitle = item.title.replace(/\.md$/, '');
-          mdContent += `- [[${item.noSuffixTitle}]] [-->](./${item.title})\n`;
+          mdContent += `- [[${item.noSuffixTitle}]][♿GO](./${item.title})\n`;
         }
       });
       return mdContent;
