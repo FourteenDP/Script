@@ -227,7 +227,7 @@ namespace Utils {
         },
         exclude: (file: string) => {
           let boolean = false;
-          const startsWith = ['.', '-', '~', '拾肆', '0000', '📋目录', 'README', '仓库', 'cedict_ts.u8'];
+          const startsWith = ['.', '-', '~', '拾肆', '0000', '📋目录', 'README', '仓库', 'cedict_ts.u8', '日志'];
           startsWith.forEach((item: string) => {
             if (file.startsWith(item)) {
               boolean = true;
