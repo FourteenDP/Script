@@ -170,6 +170,7 @@ namespace Utils {
           mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](https://github.com/FourteenD/Note/blob/main/${item.title}/📋目录.md)\n`;
         } else {
           item.path = item.path.replace(/\\/g, '/');
+          item.path = item.path.replace(/ /g, '%20');
           mdContent += `- [[${item.title.replace(/\.md$/, '')}]][♿GO](https://github.com/FourteenD/Note/blob/main/${item.path})\n`;
         }
       });
