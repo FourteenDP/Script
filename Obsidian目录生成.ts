@@ -169,8 +169,8 @@ namespace Utils {
         if (item.children) {
           mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](https://github.com/FourteenD/Note/blob/main/${item.title}/📋目录.md)\n`;
         } else {
-          item.noSuffixTitle = item.title.replace(/\.md$/, '');
-          mdContent += `- [[${item.noSuffixTitle}]][♿GO](https://github.com/FourteenD/Note/blob/main/${item.title})\n`;
+          item.path = item.path.replace(/\\/g, '/');
+          mdContent += `- [[${item.title.replace(/\.md$/, '')}]][♿GO](https://github.com/FourteenD/Note/blob/main/${item.path})\n`;
         }
       });
       return mdContent;
