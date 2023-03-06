@@ -165,12 +165,10 @@ namespace Utils {
 
     private generateMdContent(treeArr: any[], title: string = '📋目录') {
       let mdContent: string = ``;
-      let path: string = '';
+
       treeArr.forEach((item: any) => {
         if (item.children) {
-          console.log(item);
-
-          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](https://github.com/FourteenD/Note/blob/main/${item.title}/📋目录.md)\n`;
+          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](./${item.title}/📋目录.md)\n`;
         } else {
           item.path = item.path.replace(/\\/g, '/');
           item.path = item.path.replace(/ /g, '%20');
