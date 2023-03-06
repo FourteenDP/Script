@@ -165,8 +165,8 @@ namespace Utils {
 
     private generateMdContent(treeArr: any[], title: string = '📋目录') {
       let mdContent: string = ``;
+      let path: string = '';
       treeArr.forEach((item: any) => {
-
         if (item.children) {
           console.log(item);
 
