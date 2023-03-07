@@ -172,7 +172,7 @@ namespace Utils {
         } else {
           item.path = item.path.replace(/\\/g, '/');
           item.path = item.path.replace(/ /g, '%20');
-          mdContent += `- [[${item.title.replace(/\.md$/, '')}]][♿GO](https://github.com/FourteenD/Note/blob/main/${item.path})\n`;
+          mdContent += `- [[${item.title.replace(/\.md$/, '')}]][♿GO](${item.title}.md)\n`;
         }
       });
       return mdContent;
