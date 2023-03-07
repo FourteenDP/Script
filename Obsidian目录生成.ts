@@ -170,7 +170,7 @@ namespace Utils {
         if (item.children) {
           mdContent += `- **[${item.title}](./${item.title}/📋目录.md)**\n`;
         } else {
-          mdContent += `- [${item.title.replace(/\.md$/, '')}(./${item.title})]\n`;
+          mdContent += `- [${item.title.replace(/\.md$/, '')}](./${item.title})\n`;
         }
       });
       return mdContent;
