@@ -168,11 +168,9 @@ namespace Utils {
 
       treeArr.forEach((item: any) => {
         if (item.children) {
-          mdContent += `- **[[${item.title}/📋目录|${item.title}]]**[♿GO](./${item.title}/📋目录.md)\n`;
+          mdContent += `- **[${item.title}](./${item.title}/📋目录.md)**\n`;
         } else {
-          item.path = item.path.replace(/\\/g, '/');
-          item.path = item.path.replace(/ /g, '%20');
-          mdContent += `- [[${item.title.replace(/\.md$/, '')}]][♿GO](./${item.title}.md)\n`;
+          mdContent += `- [${item.title.replace(/\.md$/, '')}(./${item.title})]\n`;
         }
       });
       return mdContent;
