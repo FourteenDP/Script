@@ -1,13 +1,9 @@
 ---
-title:
-  '[object Object]': null
-tags:
-  '[object Object]': null
-date created: Invalid Date
-date updated: Invalid Date
-uid: 1683450259518
-created: Invalid Date
-updated: Invalid Date
+uid: {{now}}
+title: {{title}}
+tags: {{tags}}
+date created: {{now|yyyy-mm-dd HH:MM:ss}}
+date updated: {{now|yyyy-mm-dd HH:MM:ss}}
 ---
 
 # {{title}}
