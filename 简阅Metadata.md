@@ -1,7 +1,7 @@
 ---
-uid: {{now}}
 title: {{title}}
 tags: {{tags}}
+uid: {{now}}
 date created: {{now|yyyy-mm-dd HH:MM:ss}}
 date updated: {{now|yyyy-mm-dd HH:MM:ss}}
 ---
