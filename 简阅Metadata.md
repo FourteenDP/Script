@@ -3,10 +3,8 @@ title:
   '[object Object]': null
 tags:
   '[object Object]': null
-date created:
-  '[object Object]': null
-date updated:
-  '[object Object]': null
+date created: Invalid Date
+date updated: Invalid Date
 uid: 1683450259518
 created: Invalid Date
 updated: Invalid Date
