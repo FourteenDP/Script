@@ -1,9 +1,14 @@
 ---
-title: {{title}}
-tags: {{tags}}
-uid: {{now}}
-date created: {{now|yyyy-mm-dd HH:MM:ss}}
-date updated: {{now|yyyy-mm-dd HH:MM:ss}}
+标题:
+  "{ title }": 
+tags:
+  "{ tags }": 
+笔记ID:
+  "{ now }": 
+创建时间:
+  "{ now|yyyy-mm-dd HH:MM:ss }": 
+更新时间:
+  "{ now|yyyy-mm-dd HH:MM:ss }":
 ---
 
 # {{title}}
